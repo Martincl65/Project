@@ -1,0 +1,98 @@
+/*
+ * Base structure
+ */
+.collapse.width {
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+.mg-top-20 {
+    margin-top: 20px;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+.collapse, .sidebar, .width {
+    width: 0;
+    padding: 0;
+    margin: 0;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    /*padding: 20px;*/
+    overflow-x: hidden;
+    overflow-y: hidden; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #848484;
+    border-right: 1px solid #eee;
+    height: 100%;
+    min-height: 100%;
+}
+.sidebar.in {
+    width: 25%;
+}
+@media (min-width: 992px) {
+    .sidebar.in {
+        width: 16.666666%
+    }
+}
+
+/* Sidebar navigation */
+.sidebar.in .nav-sidebar {
+    width: 100%;
+    margin: 50px -20px;
+}
+.nav-sidebar > p {
+    color: white;
+    text-align: center;
+}
+.sidebar.in .nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.nav-sidebar > li > a {
+    color: white;
+    text-align: center;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: black;
+    background-color: #A4A4A4;
+}
+#collapse-sidebar{
+    background-color: #848484;
+    color: #ffffff;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+    margin-top: 20px;
+}
+
+.TextArea .texte{
+    width: 100%;
+}
+
+.ace_editor {
+    width: 100%!important;
+}
+
