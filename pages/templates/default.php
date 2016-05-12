@@ -21,10 +21,10 @@
                 <ul class="nav nav-sidebar">
                     <p class="active">Nom Prenom <span class="sr-only">(current)</span></p>
                     <p class="active">Test de niveau ? <span class="sr-only">(current)</span></p>
-                    <p class="active">Temps estimé : 00h45<span class="sr-only">(current)</span></p>
+                    <p class="active">Temps estimé : <?php echo $exercise->getTime();?><span class="sr-only">(current)</span></p>
                     <p><strong><u></br >Liste des exercices</u></strong></p>
-                    <li><a href="?p=exercise&test_id=1&exercise_id=1"><i>Exercice 1</i></a></li>
-                    <li><a href="?p=exercise&test_id=1&exercise_id=2"><i>Exercice 2</i></a></li>
+                    <li><a href="?p=exercise&test_id=1&exercise_id=1"><i>Exercice 1 <span class="label label-success">PHP</span></i></a></li>
+                    <li><a href="?p=exercise&test_id=1&exercise_id=2"><i>Exercice 2 <span class="label label-warning">JS</span></i></a></li>
                 </ul>
             </div>
             <div class="col-xs-12 main">
