@@ -11,13 +11,13 @@ class Language extends Table{
      * @var string
      */
     private $label;
-
     /**
-     * Language constructor.
-     * @param string $label
+     * @var string
      */
-    public function __construct($label=''){
-        $this->label=$label;
+    protected static $table = 'Language';
+
+    
+    public function __construct(){
     }
 
     /**

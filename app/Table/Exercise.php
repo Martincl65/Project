@@ -21,7 +21,6 @@ class Exercise extends Table{
     private $time;
     
     private $language;
-
     /**
      * @var string
      */
@@ -57,9 +56,12 @@ class Exercise extends Table{
     public function getTime(){
         return $this->time;
     }
-    
+
+    /**
+     * @return Language|NULL
+     */
     public function getLanguage(){
-        return $this->language;
+        return Language::find($this->language);
     }
     /**
      * @param string $title
@@ -82,7 +84,7 @@ class Exercise extends Table{
         $this->time = $time;
     }
 
-    public function setLanguage(){
+    public function setLanguage($language){
         $this->language = $language;
     }
 

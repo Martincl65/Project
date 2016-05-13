@@ -11,13 +11,15 @@ class Level extends Table{
      * @var string
      */
     private $label;
+    /**
+     * @var string
+     */
+    protected static $table = 'Level';
 
     /**
      * Level constructor.
-     * @param string $label
      */
-    public function __construct($label=''){
-        $this->label=$label;
+    public function __construct(){
     }
 
     /**

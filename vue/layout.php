@@ -19,12 +19,15 @@
         <div class="row">
             <div class="sidebar collapse width" id="sidebar">
                 <ul class="nav nav-sidebar">
+                    <!--
                     <p class="active">Nom Prenom <span class="sr-only">(current)</span></p>
                     <p class="active">Test de niveau ? <span class="sr-only">(current)</span></p>
-                    <p class="active">Temps estimé : <?php echo $exercise->getTime();?><span class="sr-only">(current)</span></p>
+                    <p class="active">Temps estimé : <span class="sr-only">(current)</span></p>
                     <p><strong><u></br >Liste des exercices</u></strong></p>
                     <li><a href="?p=exercise&test_id=1&exercise_id=1"><i>Exercice 1 <span class="label label-success">PHP</span></i></a></li>
                     <li><a href="?p=exercise&test_id=1&exercise_id=2"><i>Exercice 2 <span class="label label-warning">JS</span></i></a></li>
+                    -->
+                    <?php echo $nav; ?>
                 </ul>
             </div>
             <div class="col-xs-12 main">
@@ -33,7 +36,7 @@
             </div>
         </div>
     </div>
-    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="/js/moment.js"></script>
     <script src="/js/ace/ace.js"></script>
