@@ -16,7 +16,7 @@ class Language extends Table{
      */
     protected static $table = 'Language';
 
-    
+
     public function __construct(){
     }
 
@@ -41,4 +41,10 @@ class Language extends Table{
         $this->label = $label;
     }
 
+    /**
+     * @return string
+     */
+    public function __toString(){
+        return $this->label;
+    }
 }

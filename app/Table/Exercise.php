@@ -51,7 +51,7 @@ class Exercise extends Table{
     }
 
     /**
-     * @return date|string
+     * @return string
      */
     public function getTime(){
         return $this->time;
@@ -68,6 +68,13 @@ class Exercise extends Table{
      */
     public function setTitle($title){
         $this->title = $title;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id){
+        $this->id = $id;
     }
 
     /**

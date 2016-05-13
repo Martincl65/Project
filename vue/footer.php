@@ -3,12 +3,12 @@
     <script src="/js/moment.js"></script>
     <script src="/js/ace/ace.js"></script>
     <script src="/js/ace/theme-vibrant_ink.js"></script>
-    <script src="/js/ace/mode-ruby.js"></script>
+    <script src="/js/ace/mode-php.js"></script>
     <script src="/js/jquery-ace.min.js"></script>
 
     <script type="text/javascript">
         $(function(){
-            $('.texte').ace({ theme: 'vibrant_ink', lang: 'ruby'});
+            $('.texte').ace({ theme: 'vibrant_ink', lang: 'php'});
         });
 
     </script>
