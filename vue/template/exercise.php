@@ -22,8 +22,8 @@
                     <p class="active">Nom Prenom <span class="sr-only">(current)</span></p>
                     <p class="active">Test <?php echo $test->getLevel()->getLabel();?><span class="sr-only">(current)</span></p>
                     <p class="active">Temps estimé : <?php echo $test->getTotalTime(); ?><span class="sr-only"></span></p>
-                    <?php foreach ($test->getExercises() as $exercice): ?>
-                        <li><a href="?p=exercise&test_id=<?php echo $test->getId(); ?>&exercise_id=<?php echo $exercice->getId(); ?>"><i><?php echo $exercice->getTitle(); ?><span class="label label-<?php echo $exercise->getLanguage()->getLabel();?>"><?php echo $exercice->getLanguage()->getLabel(); ?></span></i></a></li>
+                    <?php foreach ($test->getExercises() as $testExercise): ?>
+                        <li><a href="?p=exercise&test_id=<?php echo $test->getId(); ?>&exercise_id=<?php echo $testExercise->getId(); ?>"><i><?php echo $testExercise->getTitle(); ?><span class="label label-<?php echo $testExercise->getLanguage()->getLabel();?>"><?php echo $testExercise->getLanguage()->getLabel(); ?></span></i></a></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
@@ -38,7 +38,11 @@
                     <p><?php echo $exercise->getDetail();?></p>
                 </div>
                 <div class="col-sm-6 col-xs-12 mg-top-20 TextArea">
-                    <textarea class="texte" rows=30></textarea>
+                    <form action="#" method="post">
+                        <?php echo $form->textArea('content', array('class' => 'code')); ?>
+                        <?php echo $form->input('test', 'text'); ?>
+                        <?php echo $form->submit(); ?>
+                    </form>
                 </div>
                 <div class="col-xs-12 mg-top-20 MenuBas">
                     <button type="button" class="btn btn-danger btn-nav pull-left">Precédent</button>
@@ -57,7 +61,7 @@
 
 <script type="text/javascript">
     $(function(){
-        $('.texte').ace({ theme: 'vibrant_ink', lang: '<?php echo $exercise->getLanguage()->getLabel();?>'});
+        $('.code').ace({ theme: 'vibrant_ink', lang: '<?php echo $exercise->getLanguage()->getLabel();?>'});
     });
 
 </script>

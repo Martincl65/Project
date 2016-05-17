@@ -84,6 +84,10 @@
     color: #ffffff;
 }
 
+.btn-info{
+    margin-left: 40%;
+}
+
 /*
  * Main content
  */
@@ -100,8 +104,17 @@
     width: 100%!important;
 }
 
-.label{
+.label-php{
+    background-color: blue;
+}
+.label-sql{
     background-color: green;
+}
+.label-java{
+    background-color: red;
+}
+.label-javascript{
+    background-color: orange;
 }
 
 /****************************************************************************************/

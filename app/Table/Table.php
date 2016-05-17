@@ -59,4 +59,32 @@ class Table {
         $results = App::getDB()->query($statement, static::class);
         return $results;
     }
+
+    /**
+     * @param $parameters
+     */
+    public function add($parameters){
+        $statement = 'INSERT INTO ' .static::$table. 'VALUE(' .$parameters. ')';
+        $statement->prepare();
+    }
+
+    /**
+     * @param $parameters
+     * @param $values
+     */
+    public function update($parameters, $values){
+        $parameters = ['id' => $id];
+        $statement = 'UPDATE' .static::$table. 'SET' .$parameters. '=' .$values. 'WHERE id = :id';
+        $statement->prepare();
+    }
+
+    /**
+     * @param $id
+     */
+    public function delete ($id){
+        $parameters = ['id' => $id];
+        $statement = 'DELETE FROM' .static::$table. 'WHERE id = :id';
+        $statement->prepare();
+
+    }
 }

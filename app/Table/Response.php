@@ -11,13 +11,13 @@ class Response extends Table{
      * @var string
      */
     private $content;
-
     /**
-     * Response constructor.
-     * @param string $content
+     * @var string
      */
-    public function __construct($content=''){
-        $this->content = $content;
+    protected static $table = 'Response';
+
+    
+    public function __construct(){
     }
 
     /**
@@ -39,5 +39,10 @@ class Response extends Table{
      */
     public function setContent($content){
         $this->content = $content;
+    }
+
+    public function register($content){
+        $sql = 'INSERT INTO Response VALUE (' .$content. ')';
+        return $sql;
     }
 }
