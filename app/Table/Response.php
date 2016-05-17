@@ -16,8 +16,9 @@ class Response extends Table{
      */
     protected static $table = 'Response';
 
-    
-    public function __construct(){
+
+    public function __construct(array $data){
+        $this->hydrate($data);
     }
 
     /**

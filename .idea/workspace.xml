@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="711d110c-6ec1-4116-83cb-6da65ded3dc5" name="Default" comment="" />
+    <list default="true" id="711d110c-6ec1-4116-83cb-6da65ded3dc5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Form.php" afterPath="$PROJECT_DIR$/app/Form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Table/Response.php" afterPath="$PROJECT_DIR$/app/Table/Response.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Table/Table.php" afterPath="$PROJECT_DIR$/app/Table/Table.php" />
+    </list>
     <ignored path="Project.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -35,7 +39,7 @@
       <file leaf-file-name="exercise.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/template/exercise.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="697">
               <caret line="41" column="59" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="59" />
               <folding />
             </state>
@@ -45,12 +49,12 @@
       <file leaf-file-name="Response.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Table/Response.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="482">
+              <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
               <folding>
-                <marker date="1463493204129" expanded="true" signature="694:722" placeholder="INSERT INTO Response... " />
-                <marker date="1463493204129" expanded="true" signature="694:734" placeholder="INSERT INTO Response... " />
-                <marker date="1463493204129" expanded="true" signature="694:737" placeholder="INSERT INTO Response... " />
+                <marker date="1463498749590" expanded="true" signature="732:760" placeholder="INSERT INTO Response... " />
+                <marker date="1463498749590" expanded="true" signature="732:772" placeholder="INSERT INTO Response... " />
+                <marker date="1463498749590" expanded="true" signature="732:775" placeholder="INSERT INTO Response... " />
               </folding>
             </state>
           </provider>
@@ -59,8 +63,8 @@
       <file leaf-file-name="Test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Table/Test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="26" selection-end-column="37" />
+            <state relative-caret-position="68">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="12" />
               <folding>
                 <marker date="1463150912143" expanded="true" signature="1055:1346" placeholder="SELECT Exerc... Exercise" />
                 <marker date="1463150912143" expanded="true" signature="1724:2040" placeholder="SELECT Test.... ${static::$table}" />
@@ -69,18 +73,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Table.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Table/Table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+            <state relative-caret-position="499">
+              <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
               <folding>
-                <marker date="1463495810501" expanded="true" signature="398:445" placeholder="SELECT * FRO... ${static::$table}" />
-                <marker date="1463495810501" expanded="true" signature="708:722" placeholder="SELECT * FRO... ${static::$table}" />
-                <marker date="1463495810501" expanded="true" signature="1267:1282" placeholder="SELECT * FRO... ${static::$table}" />
-                <marker date="1463495810501" expanded="true" signature="1501:1513" placeholder="INSERT INTO ${static::$table}... " />
-                <marker date="1463495810501" expanded="true" signature="1501:1538" placeholder="INSERT INTO ${static::$table}VALUES... " />
-                <marker date="1463495810501" expanded="true" signature="1501:1557" placeholder="INSERT INTO ${static::$table}VALUES... " />
+                <marker date="1463498732349" expanded="true" signature="398:445" placeholder="SELECT * FRO... ${static::$table}" />
+                <marker date="1463498732349" expanded="true" signature="708:722" placeholder="SELECT * FRO... ${static::$table}" />
+                <marker date="1463498732349" expanded="true" signature="1267:1282" placeholder="SELECT * FRO... ${static::$table}" />
+                <marker date="1463498732349" expanded="true" signature="1501:1513" placeholder="INSERT INTO ${static::$table}... " />
+                <marker date="1463498732349" expanded="true" signature="1501:1538" placeholder="INSERT INTO ${static::$table}VALUES... " />
+                <marker date="1463498732349" expanded="true" signature="1501:1557" placeholder="INSERT INTO ${static::$table}VALUES... " />
               </folding>
             </state>
           </provider>
@@ -89,8 +93,8 @@
       <file leaf-file-name="Database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="527">
+              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -109,8 +113,8 @@
       <file leaf-file-name="exercise.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/exercise.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+            <state relative-caret-position="323">
+              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
               <folding>
                 <marker date="1463495348225" expanded="true" signature="357:451" placeholder="..." />
               </folding>
@@ -118,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Form.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="79" column="47" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
+            <state relative-caret-position="686">
+              <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -138,10 +142,10 @@
       <list>
         <option value="$PROJECT_DIR$/app/form.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/app/Table/Response.php" />
         <option value="$PROJECT_DIR$/vue/template/exercise.php" />
         <option value="$PROJECT_DIR$/controller/exercise.php" />
         <option value="$PROJECT_DIR$/app/Table/Table.php" />
+        <option value="$PROJECT_DIR$/app/Table/Response.php" />
         <option value="$PROJECT_DIR$/app/Form.php" />
       </list>
     </option>
@@ -202,6 +206,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -247,12 +265,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1463469028700</updated>
-      <workItem from="1463469030362" duration="20347000" />
+      <workItem from="1463469030362" duration="22398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20347000" />
+    <option name="totallyTimeSpent" value="22398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -326,17 +344,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue/template/exercise.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
+        <state relative-caret-position="697">
           <caret line="41" column="59" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="59" />
           <folding />
         </state>
@@ -344,18 +354,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/exercise.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        <state relative-caret-position="323">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
           <folding>
             <marker date="1463495348225" expanded="true" signature="357:451" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Table/Test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="26" selection-end-column="37" />
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="12" />
           <folding>
             <marker date="1463150912143" expanded="true" signature="1055:1346" placeholder="SELECT Exerc... Exercise" />
             <marker date="1463150912143" expanded="true" signature="1724:2040" placeholder="SELECT Test.... ${static::$table}" />
@@ -365,36 +383,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Table/Response.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="482">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
           <folding>
-            <marker date="1463493204129" expanded="true" signature="694:722" placeholder="INSERT INTO Response... " />
-            <marker date="1463493204129" expanded="true" signature="694:734" placeholder="INSERT INTO Response... " />
-            <marker date="1463493204129" expanded="true" signature="694:737" placeholder="INSERT INTO Response... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Table/Table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
-          <folding>
-            <marker date="1463495810501" expanded="true" signature="398:445" placeholder="SELECT * FRO... ${static::$table}" />
-            <marker date="1463495810501" expanded="true" signature="708:722" placeholder="SELECT * FRO... ${static::$table}" />
-            <marker date="1463495810501" expanded="true" signature="1267:1282" placeholder="SELECT * FRO... ${static::$table}" />
-            <marker date="1463495810501" expanded="true" signature="1501:1513" placeholder="INSERT INTO ${static::$table}... " />
-            <marker date="1463495810501" expanded="true" signature="1501:1538" placeholder="INSERT INTO ${static::$table}VALUES... " />
-            <marker date="1463495810501" expanded="true" signature="1501:1557" placeholder="INSERT INTO ${static::$table}VALUES... " />
+            <marker date="1463498749590" expanded="true" signature="732:760" placeholder="INSERT INTO Response... " />
+            <marker date="1463498749590" expanded="true" signature="732:772" placeholder="INSERT INTO Response... " />
+            <marker date="1463498749590" expanded="true" signature="732:775" placeholder="INSERT INTO Response... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="79" column="47" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
+        <state relative-caret-position="686">
+          <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Table/Table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <marker date="1463498732349" expanded="true" signature="398:445" placeholder="SELECT * FRO... ${static::$table}" />
+            <marker date="1463498732349" expanded="true" signature="708:722" placeholder="SELECT * FRO... ${static::$table}" />
+            <marker date="1463498732349" expanded="true" signature="1267:1282" placeholder="SELECT * FRO... ${static::$table}" />
+            <marker date="1463498732349" expanded="true" signature="1501:1513" placeholder="INSERT INTO ${static::$table}... " />
+            <marker date="1463498732349" expanded="true" signature="1501:1538" placeholder="INSERT INTO ${static::$table}VALUES... " />
+            <marker date="1463498732349" expanded="true" signature="1501:1557" placeholder="INSERT INTO ${static::$table}VALUES... " />
+          </folding>
         </state>
       </provider>
     </entry>
