@@ -72,11 +72,23 @@ class Table {
     }
 
     /**
-     * @param $parameters
-     * @param $values
+     * @param array $parameters
+     * @return array|bool
      */
-    public function update($parameters, $values){
-
+    public function update($parameters = []){
+        $statement = 'UPDATE '.static::$table;
+        $i = 0;
+        foreach ($parameters as $key => $value) {
+            if($i == 0) {
+                $statement .= ' SET '.$key.' = :'.$value. 'WHERE :id';
+            }
+            else {
+                $statement .= ' AND '.$key.' = :'.$value. 'WHERE :id';
+            }
+            $i++;
+        }
+        $execute = App::getDB()->prepare($statement, static::class, $parameters);
+        return $execute;
     }
 
     /**

@@ -40,7 +40,6 @@
                 <div class="col-sm-6 col-xs-12 mg-top-20 TextArea">
                     <form action="#" method="post">
                         <?php echo $form->textArea('content', array('class' => 'code')); ?>
-                        <?php echo $form->input('test', 'text'); ?>
                         <?php echo $form->submit(); ?>
                     </form>
                 </div>

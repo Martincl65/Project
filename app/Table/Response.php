@@ -12,6 +12,14 @@ class Response extends Table{
      */
     private $content;
     /**
+     * @var int
+     */
+    //private $developer;
+    /**
+     * @var int
+     */
+    //private $exercise;
+    /**
      * @var string
      */
     protected static $table = 'Response';
@@ -32,6 +40,21 @@ class Response extends Table{
      */
     public function getContent(){
         return $this->content;
+    }
+
+    /**
+     * @return int id
+     */
+   public function getDeveloper(){
+        return $this->developer;
+    }
+
+    /**
+     * @return int id
+     */
+    public function getExercise()
+    {
+        return $this->exercise;
     }
 
     /**
