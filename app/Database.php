@@ -44,18 +44,13 @@ class Database{
      * @param array $parameters
      * @param string $className
      * @param bool $execute
-     * @return array
+     * @return bool|array
      */
     public function prepare($statement, $className, $parameters = [], $execute = false){
         $req = $this->getPDO()->prepare($statement);
-        if ($execute == true) {
-        }
         if(sizeof($parameters)){
             $req->execute($parameters);
         }
-        echo ($execute == true) ? $statement : '';
-
-
-        return ($execute == false) ? $req->fetchAll(\PDO::FETCH_CLASS, $className) : 'execute';
+        return ($execute == false) ? $req->fetchAll(\PDO::FETCH_CLASS, $className) : true;
     }
 }
