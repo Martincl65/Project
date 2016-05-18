@@ -11,7 +11,6 @@ $test = App\Table\Test::find($test_id);
 $response = new \App\Table\Response();
 $form = new \App\Form('Response_form', $response);
 
-var_dump($response);
 
 if($form->isSubmitted()) {
     var_dump($response);

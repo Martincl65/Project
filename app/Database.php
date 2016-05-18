@@ -49,8 +49,6 @@ class Database{
     public function prepare($statement, $className, $parameters = [], $execute = false){
         $req = $this->getPDO()->prepare($statement);
         if ($execute == true) {
-            var_dump($statement);
-            var_dump($parameters);
         }
         if(sizeof($parameters)){
             $req->execute($parameters);
