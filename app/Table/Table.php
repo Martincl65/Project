@@ -39,14 +39,13 @@ class Table {
         //$comparator = '';
         foreach ($parameters as $key => $value) {
             if($i == 0) {
-                $statement .= ' WHERE '.$key.' LIKE :'.$key;
+                $statement .= ' WHERE '.$key.' = :'.$key;
             }
             else {
-                $statement .= ' AND '.$key.' LIKE :'.$key;
+                $statement .= ' AND '.$key.' = :'.$key;
             }
             $i++;
         }
-
         $results = App::getDB()->prepare($statement, static::class, $parameters);
         return $results;
     }
@@ -60,12 +59,16 @@ class Table {
         return $results;
     }
 
+
     /**
-     * @param $parameters
+     * @return bool
      */
-    public function add($parameters){
-        $statement = 'INSERT INTO ' .static::$table. 'VALUE(' .$parameters. ')';
-        $statement->prepare();
+    public function add(){
+        $parameters = $this->toArray();
+        unset($parameters['id']);
+        $statement = 'INSERT INTO '.static::$table.' ('.implode(', ', array_keys($parameters)).') VALUES (:'.implode(', :', array_keys($parameters)).')';
+        $execute = App::getDB()->prepare($statement, static::class, $parameters, true);
+        return $execute;
     }
 
     /**
@@ -73,31 +76,34 @@ class Table {
      * @param $values
      */
     public function update($parameters, $values){
-        $parameters = ['id' => $id];
-        $statement = 'UPDATE' .static::$table. 'SET' .$parameters. '=' .$values. 'WHERE id = :id';
-        $statement->prepare();
+
     }
 
     /**
      * @param $id
      */
     public function delete ($id){
-        $parameters = ['id' => $id];
-        $statement = 'DELETE FROM' .static::$table. 'WHERE id = :id';
-        $statement->prepare();
-
+        
     }
 
+    /**
+     * Méthode permettant d'hydrater un objet (setter ses valeurs) grâce à un tableau de données
+     * @param array $data
+     */
     public function hydrate(array $data){
-
-        foreach ($data as $key => $value)
-        {
+        foreach ($data as $key => $value) {
             $method = 'set'.$key;
-
-            if(method_exists($this, $method))
-            {
+            if(method_exists($this, $method)) {
                 $this->$method($value);
             }
         }
+    }
+
+    /**
+     * Méthode permettant de convertir un objet en tableau
+     * @return array
+     */
+    public function toArray(){
+        return get_object_vars($this);
     }
 }

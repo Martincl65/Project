@@ -9,25 +9,18 @@ $test_id = $_GET['test_id'];
 $test = App\Table\Test::find($test_id);
 
 $response = new \App\Table\Response();
-$form = new \App\Form('Response_form', $_POST['Response_form']);
-echo '<pre>';
-var_dump($response);
-echo '</pre>';
+$form = new \App\Form('Response_form', $response);
 
-echo '<pre>';
-var_dump($form);
-echo '</pre>';
-/*
-echo '<pre>';
-var_dump($_GET);
-echo '</pre>';
-echo '<pre>';
-var_dump($_POST);
-echo '</pre>';
-/*
-if($_POST['']){
-    //le code de traitement
+var_dump($response);
+
+if($form->isSubmitted()) {
+    var_dump($response);
+    if($response->getId()) {
+
+    }
+    else {
+        $response->add();
+    }
 }
-*/
 
 include_once '../vue/template/exercise.php';

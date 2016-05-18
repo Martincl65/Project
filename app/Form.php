@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Table\Table;
+
 class Form{
     /**
      * @var array
@@ -19,11 +21,11 @@ class Form{
     /**
      * Form constructor.
      * @param string $name
-     * @param array $data
+     * @param Table $entity
      */
-    public function __construct($name, $data = array()){
+    public function __construct($name, Table $entity = NULL){
         $this->name = $name;
-        $this->data = $data;
+        $this->entity = $entity;
     }
 
     /**
@@ -63,10 +65,7 @@ class Form{
             }
         }
 
-        return
-            $this->surround(
-                '<input type="'.$type.'" name="'.$this->name.'['.$name.']" value="' .$this->getValue($name) .'" '.$html.'>'
-            );
+        return $this->surround('<input type="'.$type.'" name="'.$this->name.'['.$name.']" value="' .$this->getValue($name) .'" '.$html.'>');
     }
 
     /**
@@ -81,10 +80,7 @@ class Form{
                 $html .= $key.'="'.$value.'"';
             }
         }
-        return
-            $this->surround(
-                '<textarea rows=30 name="'.$this->name.'['.$name.']" '.$html.'>'.$this->getValue($name).'</textarea>'
-            );
+        return $this->surround('<textarea rows=30 name="'.$this->name.'['.$name.']" '.$html.'>'.$this->getValue($name).'</textarea>');
     }
 
     /**
@@ -94,4 +90,17 @@ class Form{
         return $this->surround('<button type="submit">Enregistrer</button>');
     }
 
+    /**
+     * @return bool
+     */
+    public function isSubmitted(){
+        if(isset($_POST[$this->name])){
+            $data = $_POST[$this->name];
+            $this->entity->hydrate($data);
+            return true;
+        }
+        else return false;
+
+
+    }
 }

@@ -17,8 +17,7 @@ class Response extends Table{
     protected static $table = 'Response';
 
 
-    public function __construct(array $data){
-        $this->hydrate($data);
+    public function __construct(){
     }
 
     /**
@@ -41,9 +40,12 @@ class Response extends Table{
     public function setContent($content){
         $this->content = $content;
     }
-
-    public function register($content){
-        $sql = 'INSERT INTO Response VALUE (' .$content. ')';
-        return $sql;
+    
+    /**
+     * Méthode permettant de convertir un objet en tableau
+     * @return array
+     */
+    public function toArray(){
+        return get_object_vars($this);
     }
 }

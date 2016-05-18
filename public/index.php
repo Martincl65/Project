@@ -6,7 +6,7 @@ App\Autoloader::register();
 if(isset($_GET['p'])){
     $p = $_GET['p'];
 } else {
-    $p = 'home';
+    $p = '404';
 }
 
 require '../controller/'.$p.'.php';
