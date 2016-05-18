@@ -80,7 +80,7 @@ class Form{
                 $html .= $key.'="'.$value.'"';
             }
         }
-        return $this->surround('<textarea rows=30 name="'.$this->name.'['.$name.']" '.$html.'>'.$this->getValue($name).'</textarea>');
+        return $this->surround('<textarea rows=20 name="'.$this->name.'['.$name.']" '.$html.'>'.$this->getValue($name).'</textarea>');
     }
 
     /**

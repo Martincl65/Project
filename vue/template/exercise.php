@@ -26,7 +26,7 @@
                 </li>
                 <li class="sidebar-small-info" >
                     <a href="#">
-                        Prénom NOM<br/>
+                        <strong>Prénom NOM</strong><br/>
                         <?php echo $test->getLevel()->getLabel();?><br/>
                         Temps estimé : <?php echo $test->getTotalTime(); ?>
                     </a>
@@ -49,15 +49,15 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-lg fa-bars"></i> </a>
                         <h1><?php echo $exercise->getTitle();?></h1>
                         <h2 class="title-<?php echo $exercise->getLanguage()->getLabel();?>"><?php echo $exercise->getLanguage()->getLabel();?></h2>
                     </div>
-                    <div class="col-sm-6 col-xs-12 mg-top-20">
+                    <div class="col-md-6 col-sm-12 mg-top-20">
                         <p><strong>Temps estimé : </strong><?php echo $exercise->getTime();?></p>
                         <p><?php echo $exercise->getDetail();?></p>
                     </div>
-                    <div class="col-sm-6 col-xs-12 mg-top-20">
+                    <div class="col-md-6 col-sm-12 mg-top-20">
                         <form action="#" method="post">
                             <?php echo $form->textArea('content', array('class' => 'code')); ?>
                             <?php echo $form->submit(); ?>

@@ -2,12 +2,12 @@
 
 $developer = App\Table\Developer::find(1);
 $response = App\Table\Response::find(1);
-
+/*
 var_dump($response);
 
 var_dump($response->getDeveloper());
 die;
-
+*/
 $exercise_id = $_GET['exercise_id'];
 /** @var \App\Table\Exercise $exercise */
 $exercise = App\Table\Exercise::find($exercise_id);
