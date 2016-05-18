@@ -12,13 +12,13 @@ class Response extends Table{
      */
     private $content;
     /**
-     * @var int
+     * @var Developer
      */
-    //private $developer;
+    private $developer;
     /**
-     * @var int
+     * @var Exercise
      */
-    //private $exercise;
+    private $exercise;
     /**
      * @var string
      */
@@ -43,27 +43,46 @@ class Response extends Table{
     }
 
     /**
-     * @return int id
-     */
-   public function getDeveloper(){
-        return $this->developer;
-    }
-
-    /**
-     * @return int id
-     */
-    public function getExercise()
-    {
-        return $this->exercise;
-    }
-
-    /**
      * @param string $content
      */
     public function setContent($content){
         $this->content = $content;
     }
-    
+
+    /**
+     * @return int id
+     */
+    public function getDeveloper(){
+        if(property_exists($this, 'id_developer')) {
+            return Developer::find($this->id_developer);
+        }
+        return NULL;
+    }
+
+    /**
+     * @@param Developer $developer
+     */
+    public function setDeveloper(Developer $developer){
+        $this->developer = $developer;
+    }
+
+    /**
+     * @return int id
+     */
+    public function getExercise(){
+        if(property_exists($this, 'id_exercise')){
+            return Exercise::find($this->id_developer);
+        }
+        return NULL;
+    }
+
+    /**
+     * @@param Exercise $exercise
+     */
+    public function setExercise(Exercise $exercise){
+        $this->exercise = $exercise;
+    }
+
     /**
      * Méthode permettant de convertir un objet en tableau
      * @return array

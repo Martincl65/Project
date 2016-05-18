@@ -1,6 +1,16 @@
 <?php
 
 $developer = App\Table\Developer::find(1);
+$response = App\Table\Response::find(1);
+
+echo '<pre>';
+var_dump($response);
+echo '</pre>';
+
+echo '<pre>';
+var_dump($response->getDeveloper());
+echo '</pre>';
+die;
 
 $exercise_id = $_GET['exercise_id'];
 /** @var \App\Table\Exercise $exercise */
