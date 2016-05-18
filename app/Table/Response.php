@@ -71,7 +71,7 @@ class Response extends Table{
      */
     public function getExercise(){
         if(property_exists($this, 'id_exercise')){
-            return Exercise::find($this->id_developer);
+            return Exercise::find($this->id_exercise);
         }
         return NULL;
     }
