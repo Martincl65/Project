@@ -93,7 +93,7 @@ class Form{
      * @return string
      */
     public function submit(){
-        return $this->surround('<button type="submit">Enregistrer</button>');
+        return $this->surround('<button onclick="Bouton()" type="submit" class="fa fa-floppy-o fa-1x"> Enregistrer</button>');
     }
 
     /**
