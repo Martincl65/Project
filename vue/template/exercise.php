@@ -64,8 +64,6 @@
                         </form>
                     </div>
                     <div class="col-xs-12 mg-top-20">
-                        <button type="button" class="btn btn-danger btn-nav pull-left">Precédent</button>
-                        <button type="button" class="btn btn-success btn-nav pull-right"> Suivant </button>
                     </div>
                 </div>
             </div>
