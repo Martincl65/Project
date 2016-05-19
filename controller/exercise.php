@@ -1,7 +1,6 @@
 <?php
 
 $developer = App\Table\Developer::find(1);
-$response = App\Table\Response::find(1);
 /*
 var_dump($response);
 
@@ -16,17 +15,20 @@ $test_id = $_GET['test_id'];
 /** @var \App\Table\Test $test */
 $test = App\Table\Test::find($test_id);
 
-/*
-if(isset($response)){
+$response = App\Table\Response::findOneBy(array('id_developer' => $developer->getId(), 'id_exercise' => $exercise_id));
 
-}*/
-$response = new \App\Table\Response();
+if($response == NULL) {
+    $response = new \App\Table\Response();
+    $response->setDeveloper($developer);
+    $response->setExercise($exercise);
+}
+
 $form = new \App\Form('Response_form', $response);
+
 
 if($form->isSubmitted()) {
     if($response->getId()) {
         $response->update();
-        
     }
     else {
         //enregistrement de la nouvelle réponse

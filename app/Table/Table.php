@@ -51,6 +51,15 @@ class Table {
     }
 
     /**
+     * @param array $parameters
+     * @return array
+     */
+    public static function findOneBy($parameters = []){
+        $results = self::findBy($parameters);
+        return (sizeof($results)) ? $results[0] : NULL;
+    }
+
+    /**
      * @return array
      */
     public static function findAll(){
@@ -65,29 +74,31 @@ class Table {
      */
     public function add(){
         $parameters = $this->toArray();
-        unset($parameters['id']);
         $statement = 'INSERT INTO '.static::$table.' ('.implode(', ', array_keys($parameters)).') VALUES (:'.implode(', :', array_keys($parameters)).')';
         $execute = App::getDB()->prepare($statement, static::class, $parameters, true);
         return $execute;
     }
 
     /**
-     * @param array $parameters
-     * @return array|bool
+     * @return bool
      */
-    public function update($parameters = []){
-        $statement = 'UPDATE '.static::$table;
+    public function update(){
+        $parameters = $this->toArray();
+        $statement = 'UPDATE '.static::$table.' SET';
         $i = 0;
         foreach ($parameters as $key => $value) {
-            if($i == 0) {
-                $statement .= ' SET '.$key.' = :'.$value. 'WHERE :id';
+            if($key != 'id') {
+                if($i == 0) {
+                    $statement .= ' ' . $key . ' = :' . $key;
+                }
+                else {
+                    $statement .= ', ' . $key . ' = :' . $key;
+                }
+                $i++;
             }
-            else {
-                $statement .= ' AND '.$key.' = :'.$value. 'WHERE :id';
-            }
-            $i++;
         }
-        $execute = App::getDB()->prepare($statement, static::class, $parameters);
+        $statement .=  ' WHERE id = :id';
+        $execute = App::getDB()->prepare($statement, static::class, $parameters, true);
         return $execute;
     }
 
@@ -104,7 +115,7 @@ class Table {
      */
     public function hydrate(array $data){
         foreach ($data as $key => $value) {
-            $method = 'set'.$key;
+            $method = 'set'.ucfirst($key);
             if(method_exists($this, $method)) {
                 $this->$method($value);
             }

@@ -59,7 +59,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12 mg-top-20">
                         <form action="#" method="post">
-                            <?php echo $form->textArea('content', array('class' => 'code')); ?>
+                            <?php echo $form->textArea('content', array('class' => 'code')); $response->getContent()?>
                             <?php echo $form->submit(); ?>
                         </form>
                     </div>

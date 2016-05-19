@@ -6,7 +6,7 @@ class App {
 
     const DB_NAME = 'Project';
     const DB_USER = 'root';
-    const DB_PASS = 'root';
+    const DB_PASS = 'amc56';
     const DB_HOST = 'localhost';
 
     private static $database;

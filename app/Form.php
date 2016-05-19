@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Table\Response;
 use App\Table\Table;
 
 class Form{
@@ -17,6 +18,10 @@ class Form{
      * @var string
      */
     public $surround = 'div';
+    /**
+     * @var Table
+     */
+    private $entity;
 
     /**
      * Form constructor.
@@ -41,7 +46,8 @@ class Form{
      * @return mixed|null
      */
     private function getValue($index){
-        return isset($this->data[$index]) ? $this->data[$index] : null;
+        $method = 'get'.ucfirst($index);
+        return ($this->entity) ? $this->entity->$method() : NULL;
     }
 
     /**
@@ -80,7 +86,7 @@ class Form{
                 $html .= $key.'="'.$value.'"';
             }
         }
-        return $this->surround('<textarea rows=20 name="'.$this->name.'['.$name.']" '.$html.'>'.$this->getValue($name).'</textarea>');
+        return $this->surround('<textarea rows=20 name="'.$this->name.'['.$name.']" '.$html.'>'.$this->getValue($name). '</textarea>');
     }
 
     /**
@@ -95,12 +101,10 @@ class Form{
      */
     public function isSubmitted(){
         if(isset($_POST[$this->name])){
-            $data = $_POST[$this->name];
-            $this->entity->hydrate($data);
+            $this->data = $_POST[$this->name];
+            $this->entity->hydrate($this->data);
             return true;
         }
         else return false;
-
-
     }
 }

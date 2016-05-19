@@ -50,13 +50,13 @@ class Response extends Table{
     }
 
     /**
-     * @return int id
+     * @return Developer
      */
     public function getDeveloper(){
-        if(property_exists($this, 'id_developer')) {
-            return Developer::find($this->id_developer);
+        if(property_exists($this, 'id_developer') && $this->developer == NULL) {
+            $this->developer = Developer::find($this->id_developer);
         }
-        return NULL;
+        return $this->developer;
     }
 
     /**
@@ -67,13 +67,13 @@ class Response extends Table{
     }
 
     /**
-     * @return int id
+     * @return Exercise
      */
     public function getExercise(){
-        if(property_exists($this, 'id_exercise')){
-            return Exercise::find($this->id_exercise);
+        if(property_exists($this, 'id_exercise') && $this->exercise == NULL){
+            $this->exercise = Exercise::find($this->id_exercise);
         }
-        return NULL;
+        return $this->exercise;
     }
 
     /**
@@ -88,6 +88,19 @@ class Response extends Table{
      * @return array
      */
     public function toArray(){
-        return get_object_vars($this);
+        if($this->id == NULL) {
+            return array(
+                'content' => $this->content,
+                'id_exercise' => $this->exercise->getId(),
+                'id_developer' => $this->developer->getId()
+            );
+        }
+        else {
+            return array(
+                'id' => $this->id,
+                'content' => $this->content
+            );
+        }
+
     }
 }

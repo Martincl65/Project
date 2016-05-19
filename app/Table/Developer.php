@@ -60,7 +60,4 @@ class Developer extends Table{
     public function setLastName($lastName){
         $this->lastName = $lastName;
     }
-
-
-    
 }
