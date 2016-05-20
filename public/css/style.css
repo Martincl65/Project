@@ -107,6 +107,10 @@
     background: none;
 }
 
+.col-xs-12 .mg-top-20, h1, p{
+    text-align: center;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;

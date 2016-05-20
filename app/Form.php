@@ -5,7 +5,7 @@ namespace App;
 use App\Table\Response;
 use App\Table\Table;
 
-class Form{
+class Form {
     /**
      * @var array
      */
@@ -86,14 +86,14 @@ class Form{
                 $html .= $key.'="'.$value.'"';
             }
         }
-        return $this->surround('<textarea rows=20 name="'.$this->name.'['.$name.']" '.$html.'>'.$this->getValue($name). '</textarea>');
+        return $this->surround('<textarea rows=25 name="'.$this->name.'['.$name.']" '.$html.'>'.$this->getValue($name).'</textarea>');
     }
 
     /**
      * @return string
      */
     public function submit(){
-        return $this->surround('<button onclick="Bouton()" type="submit" class="fa fa-floppy-o fa-1x"> Enregistrer</button>');
+        return $this->surround('<button type="submit" class="fa fa-floppy-o fa-1x"> Enregistrer</button>');
     }
 
     /**
