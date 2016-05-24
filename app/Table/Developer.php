@@ -16,6 +16,14 @@ class Developer extends Table{
      * @var string
      */
     private $lastName;
+    /**
+     * @var string
+     */
+    private $username;
+    /**
+     * @var string
+     */
+    private $password;
 
     /**
      * @var string
@@ -45,6 +53,20 @@ class Developer extends Table{
      */
     public function getLastName(){
         return $this->lastName;
+    }
+
+    /**
+     * @return string username
+     */
+    public function getUsername(){
+        return $this->username;
+    }
+
+    /**
+     * @return string password
+     */
+    public function getPassword(){
+        return $this->password;
     }
 
     /**

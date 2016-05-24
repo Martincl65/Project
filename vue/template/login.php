@@ -34,13 +34,14 @@
                 <div class="col-lg-12">
                     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-lg fa-bars"></i> </a>
                 </div>
-                <div class="col-xs-12 mg-top-20">
-                    <form method="post">
-                        <?php echo $form->input('username'); ?>
-                        <?php echo $form->input('password'); ?>
-                        <button class="btn btn-primary">Envoyer</button>
+                <div class="col-xs-12 mg-top-20 identif">
+                    <form action="#" method="post" enctype="multipart/form-data" name="logform" id="logform" class="form-signin" role="form" >
+                        <h2 class="form-signin-heading">Identification <br /> <br /></h2>
+                        <?php echo $form->input('username', 'text', ['class' => 'form-control', 'placeholder' => 'login']); ?><br/>
+                        <?php echo $form->input('password', 'password', ['class' => 'form-control', 'placeholder' => 'Mot de passe']); ?><br/>
+                        <?php echo $form->submit(); ?>
                     </form>
-            </div>
+                </div>
         </div>
     </div>
 </div>

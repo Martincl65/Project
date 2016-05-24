@@ -172,3 +172,15 @@
     font-weight: bold;
     font-size: 1em;
 }
+
+.identif{
+    text-align: center;
+    font-style: italic;
+    padding-left: 40%;
+    padding-right: 40%;
+}
+
+.btn-valid{
+    background: lightgray;
+    color: black;
+}

@@ -6,14 +6,16 @@ App\Autoloader::register();
 if(isset($_GET['p'])){
     $p = $_GET['p'];
 } else {
-    $p = '404';
+    $p = 'login';
 }
 
 $app = new \App\App();
 $auth = new App\Table\DBAuth($app->getDB());
 if(!$auth->logged()){
+    require '../controller/login.php';
     //$app->forbidden();
 }
-
-require '../controller/'.$p.'.php';
+else {
+    require '../controller/'.$p.'.php';
+}
 

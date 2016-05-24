@@ -45,9 +45,15 @@ class Form {
      * @param $index
      * @return mixed|null
      */
-    private function getValue($index){
-        $method = 'get'.ucfirst($index);
-        return ($this->entity) ? $this->entity->$method() : NULL;
+    public function getValue($index){
+        if($this->entity != NULL) {
+            $method = 'get' . ucfirst($index);
+            return $this->entity->$method();
+        }
+        else if($this->data != NULL) {
+            return $this->data[$index];
+        }
+        else NULL;
     }
 
     /**
@@ -90,10 +96,17 @@ class Form {
     }
 
     /**
+     * @param array $attr
      * @return string
      */
-    public function submit(){
-        return $this->surround('<button type="submit" class="fa fa-floppy-o fa-1x"> Enregistrer</button>');
+    public function submit($attr = array()){
+        $html = '';
+        if(sizeof($attr)){
+            foreach ($attr as $key => $value) {
+                $html .= $key.'="'.$value.'"';
+            }
+        }
+        return $this->surround('<button type="submit" class="btn btn-primary" '.$html.'>Enregistrer</button>');
     }
 
     /**
@@ -102,7 +115,9 @@ class Form {
     public function isSubmitted(){
         if(isset($_POST[$this->name])){
             $this->data = $_POST[$this->name];
-            $this->entity->hydrate($this->data);
+            if($this->entity != NULL) {
+                $this->entity->hydrate($this->data);
+            }
             return true;
         }
         else return false;
