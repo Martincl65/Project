@@ -26,7 +26,7 @@
             </li>
             <li class="sidebar-small-info" >
                 <a href="#">
-                    <strong>Prénom NOM</strong><br/>
+                    <strong><strong><?php echo $developer->getFirstName(); ?>  <?php echo $developer->getLastName()?></strong><br/></strong><br/>
                     <?php echo $test->getLevel()->getLabel();?><br/>
                     Temps estimé : <?php echo $test->getTotalTime(); ?>
                 </a>

@@ -19,7 +19,9 @@ class Exercise extends Table{
      * @var \DateTime
      */
     private $time;
-    
+    /**
+     * @var Language
+     */
     private $language;
     /**
      * @var string
@@ -61,7 +63,10 @@ class Exercise extends Table{
      * @return Language|NULL
      */
     public function getLanguage(){
-        return Language::find($this->language);
+        if(property_exists($this, 'id_language') && $this->language == NULL){
+            $this->language = Language::find($this->id_language);
+        }
+        return $this->language;
     }
     /**
      * @param string $title

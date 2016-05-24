@@ -24,6 +24,10 @@ class Developer extends Table{
      * @var string
      */
     private $password;
+    /**
+     * @var Test
+     */
+    private $test;
 
     /**
      * @var string
@@ -67,6 +71,16 @@ class Developer extends Table{
      */
     public function getPassword(){
         return $this->password;
+    }
+
+    /**
+     * @return Test
+     */
+    public function getTest(){
+        if(property_exists($this, 'id_test') && $this->test == NULL){
+            $this->test = Test::find($this->id_test);
+        }
+        return $this->test;
     }
 
     /**

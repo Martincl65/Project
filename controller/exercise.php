@@ -1,6 +1,10 @@
 <?php
 
-$developer = App\Table\Developer::find(1);
+$developer_id = $_SESSION['auth'];
+/**
+ * @var \App\Table\Developer $developer
+ */
+$developer = App\Table\Developer::find($developer_id);
 /*
 var_dump($response);
 

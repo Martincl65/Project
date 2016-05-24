@@ -1,7 +1,8 @@
 <?php
-
 require '../app/Autoloader.php';
 App\Autoloader::register();
+session_start();
+
 
 if(isset($_GET['p'])){
     $p = $_GET['p'];
@@ -9,13 +10,13 @@ if(isset($_GET['p'])){
     $p = 'login';
 }
 
-$app = new \App\App();
-$auth = new App\Table\DBAuth($app->getDB());
-if(!$auth->logged()){
-    require '../controller/login.php';
-    //$app->forbidden();
+//$app = new \App\App();
+$auth = new App\Table\DBAuth(\App\App::getDB());
+var_dump($auth->logged());
+if($auth->logged()){
+    require '../controller/'.$p.'.php';
 }
 else {
-    require '../controller/'.$p.'.php';
+    require '../controller/login.php';
 }
 

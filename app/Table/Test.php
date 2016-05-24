@@ -14,7 +14,7 @@ class Test extends Table{
      */
     private $detail;
     /**
-     * @var int
+     * @var Level
      */
     private $level;
     /**
@@ -56,7 +56,10 @@ class Test extends Table{
      * @return Level
      */
     public function getLevel(){
-        return Level::find($this->level);
+        if(property_exists($this, 'id_level') && $this->level == NULL) {
+            $this->level = Level::find($this->id_level);
+        }
+        return $this->level;
     }
 
     /**
@@ -65,7 +68,7 @@ class Test extends Table{
     public function getExercises(){
         $parameters = ['id' => $this->id];
         $statement = '
-            SELECT Exercise.id, Exercise.title, Exercise.detail, Exercise.time, Exercise.language 
+            SELECT Exercise.id, Exercise.title, Exercise.detail, Exercise.time, Exercise.id_language 
             FROM  Exercise
             JOIN Asso_Test_Exercise ON Exercise.id = Asso_Test_Exercise.id_exercise
             JOIN Test ON Asso_Test_Exercise.id_test = Test.id
@@ -86,7 +89,7 @@ class Test extends Table{
     public static function find($id){
         $parameters = ['id' => $id];
         $statement = '
-            SELECT Test.id, Test.detail, Test.level, SEC_TO_TIME(SUM(TIME_TO_SEC(Exercise.time))) AS totalTime
+            SELECT Test.id, Test.detail, Test.id_level, SEC_TO_TIME(SUM(TIME_TO_SEC(Exercise.time))) AS totalTime
             FROM '.static::$table.'
             JOIN Asso_Test_Exercise ON Test.id = Asso_Test_Exercise.id_test
             JOIN Exercise ON Asso_Test_Exercise.id_exercise = Exercise.id
