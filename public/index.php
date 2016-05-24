@@ -10,9 +10,7 @@ if(isset($_GET['p'])){
     $p = 'login';
 }
 
-//$app = new \App\App();
 $auth = new App\Table\DBAuth(\App\App::getDB());
-var_dump($auth->logged());
 if($auth->logged()){
     require '../controller/'.$p.'.php';
 }
