@@ -8,8 +8,7 @@ if($form->isSubmitted()) {
 
     /** @var App\Table\DBAuth $auth */
     if($auth->login($form->getValue('username'), $form->getValue('password'))) {
-        $developer_id = $_SESSION['auth'];
-        header('location: ?p=test&test_id=' .$testid->getTest());
+        header('location: ?p=test');
     }
     else {
         header('location: ?p=login');

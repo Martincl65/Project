@@ -18,6 +18,10 @@ class Test extends Table{
      */
     private $level;
     /**
+     * @var array
+     */
+    private $exercises;
+    /**
      * @var \DateTime
      */
     private $totalTime;
@@ -66,16 +70,18 @@ class Test extends Table{
      * @return array
      */
     public function getExercises(){
-        $parameters = ['id' => $this->id];
-        $statement = '
-            SELECT Exercise.id, Exercise.title, Exercise.detail, Exercise.time, Exercise.id_language 
-            FROM  Exercise
-            JOIN Asso_Test_Exercise ON Exercise.id = Asso_Test_Exercise.id_exercise
-            JOIN Test ON Asso_Test_Exercise.id_test = Test.id
-            WHERE Test.id = :id
-        ';
-        $results = App::getDB()->prepare($statement, Exercise::class, $parameters);
-        return $results;
+        if($this->exercises == NULL) {
+            $parameters = ['id' => $this->id];
+            $statement = '
+                SELECT Exercise.id, Exercise.title, Exercise.detail, Exercise.time, Exercise.id_language 
+                FROM  Exercise
+                JOIN Asso_Test_Exercise ON Exercise.id = Asso_Test_Exercise.id_exercise
+                JOIN Test ON Asso_Test_Exercise.id_test = Test.id
+                WHERE Test.id = :id
+           ';
+            $this->exercises = App::getDB()->prepare($statement, Exercise::class, $parameters);
+        }
+        return $this->exercises;
     }
 
     public function getTotalTime() {

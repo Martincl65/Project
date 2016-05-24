@@ -33,7 +33,7 @@
                 </li>
                 <?php foreach ($test->getExercises() as $testExercise): ?>
                     <li>
-                        <a href="?p=exercise&test_id=<?php echo $test->getId(); ?>&exercise_id=<?php echo $testExercise->getId(); ?>">
+                        <a href="?p=exercise&exercise_id=<?php echo $testExercise->getId(); ?>">
                             <i>
                                 <?php echo $testExercise->getTitle(); ?>
                                 &nbsp;&nbsp;<span class="label label-<?php echo $testExercise->getLanguage()->getLabel();?>"><?php echo $testExercise->getLanguage()->getLabel(); ?></span>
