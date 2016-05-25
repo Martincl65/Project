@@ -41,6 +41,9 @@
                         </a>
                     </li>
                 <?php endforeach; ?>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li class="text-center"><i><a href="?p=logout"><span class="fa fa-sign-out fa-3x" aria-hidden="true"></span></a></i></li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->

@@ -139,6 +139,10 @@
     }
 }
 
+.fa-sign-out{
+    color: white;
+}
+
 .ace_editor {
     width: 100%!important;
 }

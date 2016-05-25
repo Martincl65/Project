@@ -39,5 +39,9 @@ class DBAuth {
         return isset($_SESSION['auth']);
     }
 
+    public function logout(){
+        session_destroy();
+    }
+
 }
 
