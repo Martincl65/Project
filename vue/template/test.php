@@ -56,6 +56,7 @@
                 </div>
                 <div class="col-xs-12 mg-top-20">
                     <h1>Bienvenue</h1>
+                    <p>&nbsp;</p>
                     <p><?php echo $test->getDetail();?></p></div>
             </div>
         </div>
