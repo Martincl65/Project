@@ -57,10 +57,10 @@
 </div>
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="/js/ace/ace.js"></script>
-<script src="/js/ace/theme-vibrant_ink.js"></script>
-<script src="/js/ace/mode-<?php echo $exercise->getLanguage()->getLabel();?>.js"></script>
-<script src="/js/jquery-ace.min.js"></script>
+<script src="js/ace/ace.js"></script>
+<script src="js/ace/theme-vibrant_ink.js"></script>
+<script src="js/ace/mode-<?php echo $exercise->getLanguage()->getLabel();?>.js"></script>
+<script src="js/jquery-ace.min.js"></script>
 <script type="text/javascript">
     $(function(){
         $("#menu-toggle").click(function(e) {
