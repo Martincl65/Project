@@ -14,4 +14,4 @@ if($form->isSubmitted()) {
         header('location: ?p=login');
     }
 }
-include_once '../vue/template/login.php';
+include_once '../Views/template/login.php';

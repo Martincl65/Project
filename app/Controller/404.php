@@ -9,4 +9,4 @@ $developer = App\Table\Developer::find($developer_id);
 /** @var \App\Table\Test $test */
 $test = $developer->getTest();
 
-include_once '../vue/template/404.php';
+include_once '../Views/template/404.php';

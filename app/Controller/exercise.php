@@ -47,4 +47,4 @@ if($form->isSubmitted()) {
     }
 }
 
-include_once '../vue/template/exercise.php';
+include_once '../Views/template/exercise.php';

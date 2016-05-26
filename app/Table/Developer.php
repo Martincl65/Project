@@ -4,39 +4,26 @@ namespace App\Table;
 
 class Developer extends Table{
 
-    /**
-     * @var int
-     */
+    /** @var int */
     private $id;
-    /**
-     * @var string
-     */
+
+    /** @var string */
     private $firstName;
-    /**
-     * @var string
-     */
+
+    /** @var string */
     private $lastName;
-    /**
-     * @var string
-     */
+
+    /** @var string */
     private $username;
-    /**
-     * @var string
-     */
+
+    /** @var string */
     private $password;
-    /**
-     * @var Test
-     */
+
+    /** @var Test */
     private $test;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected static $table = 'Developer';
-
-    
-    public function __construct(){
-    }
 
     /**
      * @return int id
