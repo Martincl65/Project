@@ -26,7 +26,7 @@ class Table {
         $parameters = ['id' => $id];
         $statement = 'SELECT * FROM '.static::$table.' WHERE id = :id ';
         $result = App::getDB()->prepare($statement, static::class, $parameters);
-        return $result[0];
+        return reset($result);
     }
 
     /**
